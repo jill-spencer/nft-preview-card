@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: hsl(217, 54%, 11%);
+	font-family: 'Outfit', sans-serif;
+}
+
+main {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.card-container {
+	width: 90vw;
+	max-width: 375px;
+	margin: 0 auto;
+	background: hsl(216, 50%, 16%);
+	margin-top: 10vh;
+	border-radius: 5%;
+}
+
+.image-container {
+	display: block;
+	position: relative;
+}
+
+.card-image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transform: scale(0.85);
+	border-radius: 5%;
+}
+
+.image-overlay::before {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	height: auto;
+	transform: scale(0.85);
+	border-radius: 5%;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	background: hsl(178, 100%, 50%);
+	opacity: 0;
+}
+
+.image-overlay::after {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	height: auto;
+	transform: scale(0.85);
+	border-radius: 5%;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	background: url('./images/icon-view.svg') center/30% no-repeat fixed;
+	opacity: 0;
+}
+
+.image-overlay:hover::before {
+	opacity: 0.6;
+}
+
+.image-overlay:hover::after {
+	opacity: 0.8;
+}
+
+.card-content {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.card-content h1 {
+	color: hsl(0, 0%, 100%);
+	text-transform: capitalize;
+	font-weight: 400;
+	margin-top: 0;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+.card-content h1:hover {
+	color: hsl(178, 100%, 50%);
+}
+
+.card-text {
+	color: hsl(215, 51%, 70%);
+	letter-spacing: 1px;
+	font-weight: 300;
+	line-height: 1.5;
+	font-size: 1.1rem;
+}
+
+.card-details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.card-details span {
+	padding-left: 0.2rem;
+}
+
+.amount {
+	color: hsl(178, 100%, 50%);
+}
+
+.time {
+	color: hsl(215, 51%, 70%);
+}
+
+.underline {
+	width: 85%;
+	height: 1px;
+	background: hsl(215, 51%, 70%);
+	opacity: 0.3;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	width: 85%;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+
+.image-border {
+	display: inline-block;
+	border: 1px solid hsl(0, 0%, 100%);
+	border-radius: 50%;
+}
+
+.avatar {
+	height: 2.5rem;
+}
+
+footer p {
+	color: hsl(215, 51%, 70%);
+	text-transform: capitalize;
+	padding-left: 1rem;
+	letter-spacing: 1px;
+}
+
+.creator-link {
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+
+.creator-link:hover {
+	color: hsl(178, 100%, 50%);
+}
+
+/* frontend mentor attribution */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 3rem;
+	color: hsl(215, 51%, 70%);
+}
+.attribution a {
+	color: hsl(215, 32%, 27%);
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+
+.attribution a:hover {
+	color: hsl(178, 100%, 50%);
+}
